@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+	<meta charset="UTF-8" />
+	<title>Order</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/form.css" />
+
+	<script>
+		function codegen()
+		{
+			var dot = ".";
+			var dash = "-";
+
+			var ll = document.getElementById("left");
+			var rl = document.getElementById("right");
+			var layout;
+
+			var ball = document.getElementById("ball");
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			var db9 = document.getElementById("db9");
+
+			var ff = document.getElementById("ffeet");
+			var bf = document.getElementById("bfeet");
+
+			var code = document.getElementById("code");
+
+			var mail = document.getElementById("mail");
+
+
+			if (left.checked)
+			{
+
+				layout = ll.value;
+			}
+			else
+			{
+				layout = rl.value;
+			}
+
+			code.value = layout +
+			dash  + ball.value + 
+			dash  + btn1.value +
+			dash  + btn2.value +
+			dash  + btn3.value +
+			dash + db9.value +
+			dash + ff.value +
+			dash + bf.value;
+
+			mail.href = "mailto:amistick@fastmail.com?Subject=AmiStick%20Order%20Inquiry&body=Product%20code:%20"  + code.value + "%0D%0AShipping%20country:%20";
+
+			console.log("layout: " + layout);
+			console.log("ball: " + ball.value);
+			console.log("button1: " + btn1.value);
+			console.log("button2: " + btn2.value);
+			console.log("button3: " + btn3.value);
+		}
+	</script>
+</head>
+
+<body onload="codegen()">
+	<section class="main">
+		<div class="inner">
+
+			<a class="language" href="order.html">Polski</a>
+
+			<form onchange="codegen()">
+				<div class="option">					
+					<h3>Now what?</h3>
+					<p class="info">
+						Here you can design your very own AmiStick, by choosing the top panel layout, the colors of the lever ball, the buttons and the cable adapter, and also the length of the feet. When you're done, copy the code from the bottom of the page and send it, together with the shipping destination country, to <strong>amistick@fastmail.com</strong> or simply <a id="mail" href="" target="_top">use this link</a>. 
+					</p>
+
+					<p class="info">
+						I will send you back the total order cost and the colored mockup of your AmiStick variant for visual verification. If you agree on the price and the product details, I will give you the full payment information.
+					</p>
+
+					<p class="info">
+						<strong>ATTENTION:</strong> The cable is not included in the order. There are a lot of variants available on the market, that's why I leave the choice of cable length, color and other details solely to you. Just remember to use the <strong>straight-through</strong> (568B standard) and not <strong>cross-over</strong> cable.   
+					</p>
+				</div><!-- /.option -->
+				<div class="option">
+					<h3>Layout</h3>			
+					<label>
+						<input type="radio" name="layout" value="LL" id="left" checked "/><img src="images/layout-left.png" alt="left" />
+					</label>
+					<label>
+						<input type="radio" name="layout" value="LR" id="right"/><img src="images/layout-right.png" alt="right" />
+					</label>
+				</div>
+
+				<div class="option">
+					<h3>Colors</h3>
+
+					<fieldset>						
+						<p>Lever ball (LB)
+
+							<select id="ball">
+								<option value="LBR">Red</option>
+								<option value="LBP">Pink</option>
+								<option value="LBY">Yellow</option>
+								<option value="LBG">Green</option>
+								<option value="LBB">Blue</option>
+								<option value="LBW">White</option>
+								<option value="LBK">Black</option>    
+							</select>
+						</p>
+					</fieldset>
+
+					<fieldset>
+
+						<p>Button 1 (B1)
+
+							<select id="btn1">
+								<optgroup label="Solid">
+									<option value="B1R">Red</option>
+									<option value="B1P">Pink</option>
+									<option value="B1Y">Yellow</option>
+									<option value="B1G">Green</option>
+									<option value="B1B">Blue</option>
+									<option value="B1W">White</option>
+									<option value="B1K">Black</option>    
+								</optgroup>
+
+								<optgroup label="Mixed">
+									<option value="B1RK">Red-Black</option>
+									<option value="B1PK">Pink-Black</option>
+									<option value="B1YK">Yellow-Black</option>
+									<option value="B1GK">Green-Black</option>
+									<option value="B1BK">Blue-Black</option>
+									<option value="B1WK">White-Black</option>
+								</optgroup>
+							</select>
+						</p>
+
+						<p>Button 2 (B2)
+
+							<select id="btn2">
+								<optgroup label="Solid">
+									<option value="B2R">Red</option>
+									<option value="B2P">Pink</option>
+									<option value="B2Y">Yellow</option>
+									<option value="B2G">Green</option>
+									<option value="B2B">Blue</option>
+									<option value="B2W">White</option>
+									<option value="B2K">Black</option>    
+								</optgroup>
+
+								<optgroup label="Mixed">
+									<option value="B2RK">Red-Black</option>
+									<option value="B2PK">Pink-Black</option>
+									<option value="B2YK">Yellow-Black</option>
+									<option value="B2GK">Green-Black</option>
+									<option value="B2BK">Blue-Black</option>
+									<option value="B2WK">White-Black</option>
+								</optgroup>
+							</select>
+						</p>
+
+						<p>Button 3 (B3)
+
+							<select id="btn3">
+								<optgroup label="Solid">
+									<option value="B3R">Red</option>
+									<option value="B3P">Pink</option>
+									<option value="B3Y">Yellow</option>
+									<option value="B3G">Green</option>
+									<option value="B3B">Blue</option>
+									<option value="B3W">White</option>
+									<option value="B3K">Black</option>    
+								</optgroup>
+
+								<optgroup label="Mixed">
+									<option value="B3RK">Red-Black</option>
+									<option value="B3PK">Pink-Black</option>
+									<option value="B3YK">Yellow-Black</option>
+									<option value="B3GK">Green-Black</option>
+									<option value="B3BK">Blue-Black</option>
+									<option value="B3WK">White-Black</option>
+								</optgroup>
+							</select>
+						</p>
+					</fieldset>
+
+					<fieldset>
+
+						<p>Cable adapter
+
+							<select id="db9">
+								<option value="DB9R">Red</option>
+								<option value="DB9Y">Yellow</option>
+								<option value="DB9G">Green</option>
+								<option value="DB9B">Blue</option>
+								<option value="DB9K">Black</option>
+								<option value="DB9M">Silver</option>
+							</select>
+						</p>
+					</fieldset>
+				</div>
+
+				<!-- Feet length -->
+				<div class="option">
+					<h3>Feet length</h3>
+
+					<div class="list">
+						<p>Front row
+
+							<select id="ffeet">
+								<option value="FF00">none</option>
+								<option value="FF10" selected>10 mm</option>
+								<option value="FF20">20 mm</option>
+								<option value="FF30">30 mm</option>
+							</select>
+						</p>
+					</div>
+
+					<div class="list">
+						<p>Back row
+
+							<select id="bfeet">
+								<option value="BF00">none</option>
+								<option value="BF10" selected>10 mm</option>
+								<option value="BF20">20 mm</option>
+								<option value="BF30">30 mm</option>
+							</select>
+						</p>
+					</div>
+				</div>
+
+				<div class="option">
+					<h3>Order code</h3>
+					<p>
+						<br />						
+						<output id="code" name="code">Please, turn ON the JavaScript</output>
+					</p>
+					<p>
+						<button id="copyButton">Copy to Clipboard</button>
+					</p>
+				</div>
+			</form>
+
+			<a class="language" href="index-en.html">Back to the main page</a>
+
+		</div><!-- /.inner -->
+	</section><!-- /.main -->
+</body>
+
+<script>
+	// copy the code to clipboard
+	document.getElementById("copyButton").addEventListener("click", function(event) 
+	{
+		event.preventDefault();
+
+		var code = document.getElementById("code");
+		var range = document.createRange();
+
+		range.selectNode(code);
+		window.getSelection().addRange(range);
+
+		document.execCommand('copy');
+
+		console.log("Range: " + range);
+
+		window.getSelection().removeRange(range);
+	});
+
+	// Live Reload
+	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	</html>

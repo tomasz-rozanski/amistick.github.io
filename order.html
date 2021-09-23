@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+<head>
+	<meta charset="UTF-8" />
+	<title>Zamówienie</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/form.css" />
+
+	<script>
+		function codegen()
+		{
+			var dot = ".";
+			var dash = "-";
+
+			var ll = document.getElementById("left");
+			var rl = document.getElementById("right");
+			var layout;
+
+			var ball = document.getElementById("ball");
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			var db9 = document.getElementById("db9");
+
+			var ff = document.getElementById("ffeet");
+			var bf = document.getElementById("bfeet");
+
+			var code = document.getElementById("code");
+
+			var mail = document.getElementById("mail");
+
+
+			if (left.checked)
+			{
+
+				layout = ll.value;
+			}
+			else
+			{
+				layout = rl.value;
+			}
+
+			code.value = layout +
+			dash  + ball.value + 
+			dash  + btn1.value +
+			dash  + btn2.value +
+			dash  + btn3.value +
+			dash + db9.value +
+			dash + ff.value +
+			dash + bf.value;
+
+			mail.href = "mailto:amistick@fastmail.com?Subject=AmiStick-Zamówienie%20wstępne&body=Kod%20produktu:%20"  + code.value + "%0D%0AKraj%20wysyłki:%20";
+
+			console.log("layout: " + layout);
+			console.log("ball: " + ball.value);
+			console.log("button1: " + btn1.value);
+			console.log("button2: " + btn2.value);
+			console.log("button3: " + btn3.value);
+		}
+	</script>
+</head>
+
+<body onload="codegen()">
+	<section class="main">
+		<div class="inner">
+
+			<a class="language" href="order-en.html">English</a>
+
+			<form onchange="codegen()">
+				<div class="option">					
+					<h3>Co teraz?</h3>
+					<p class="info">
+						Tutaj możesz stworzyć swój unikalny wariant AmiSticka, wybierając rodzaj górnego panelu, kolory gałki, przycisków oraz przelotki, a także wysokość nóżek. Kiedy skończysz, skopiuj kod z dołu strony i wyślij go, razem z informacją o kraju wysyłki, na adres <strong>amistick@fastmail.com</strong> albo po prostu <a id="mail" href="" target="_top">użyj tego odnośnika</a>.
+					</p>
+
+					<p class="info">
+						W odpowiedzi prześlę ci całkowity koszt zamówienia oraz - w celu weryfikacji wzrokowej - rysunek przedstawiający, wybrany przez ciebie, wariant AmiSticka. Jeśli zgodzisz się na podaną cenę i potwierdzisz poprawność konfiguracji, otrzymasz informacje potrzebne do wykonania płatności.
+					</p>
+
+					<p class="info">
+						<strong>UWAGA:</strong> W zestawie nie ma kabla połączeniowego. Na rynku dostępna jest ogromna liczba wariantów, dlatego wybór długości, koloru i innych szczegółów pozostawiam tobie. Pamiętaj tylko, żeby użyć kabla <strong>prostego</strong> (norma 568B) zamiast <strong>krosowanego</strong>.
+					</p>
+				</div><!-- /.option -->
+
+				<div class="option">
+					<h3>Layout</h3>			
+					<label>
+						<input type="radio" name="layout" value="LL" id="left" checked "/><img src="images/layout-left.png" alt="left" />
+					</label>
+					<label>
+						<input type="radio" name="layout" value="LR" id="right"/><img src="images/layout-right.png" alt="right" />
+					</label>
+				</div>
+
+				<div class="option">
+					<h3>Kolory</h3>
+
+					<fieldset>						
+						<p>Gałka (LB)
+
+							<select id="ball">
+								<option value="LBR">Czerwony</option>
+								<option value="LBP">Różowy</option>
+								<option value="LBY">Żółty</option>
+								<option value="LBG">Zielony</option>
+								<option value="LBB">Niebieski</option>
+								<option value="LBW">Biały</option>
+								<option value="LBK">Czarny</option>    
+							</select>
+						</p>
+					</fieldset>
+
+					<fieldset>
+
+						<p>Przycisk 1 (B1)
+
+							<select id="btn1">
+								<optgroup label="Jednolity">
+									<option value="B1R">Czerwony</option>
+									<option value="B1P">Różowy</option>
+									<option value="B1Y">Żółty</option>
+									<option value="B1G">Zielony</option>
+									<option value="B1B">Niebieski</option>
+									<option value="B1W">Biały</option>
+									<option value="B1K">Czarny</option>    
+								</optgroup>
+
+								<optgroup label="Mieszany">
+									<option value="B1RK">Czerwono-Czarny</option>
+									<option value="B1PK">Różowo-Czarny</option>
+									<option value="B1YK">Żółto-Czarny</option>
+									<option value="B1GK">Zielono-Czarny</option>
+									<option value="B1BK">Niebiesko-Czarny</option>
+									<option value="B1WK">Biało-Czarny</option>
+								</optgroup>
+							</select>
+						</p>
+
+						<p>Przycisk 2 (B2)
+
+							<select id="btn2">
+								<optgroup label="Jednolity">
+									<option value="B2R">Czerwony</option>
+									<option value="B2P">Różowy</option>
+									<option value="B2Y">Żółty</option>
+									<option value="B2G">Zielony</option>
+									<option value="B2B">Niebieski</option>
+									<option value="B2W">Biały</option>
+									<option value="B2K">Czarny</option>    
+								</optgroup>
+
+								<optgroup label="Mieszany">
+									<option value="B2RK">Czerwono-Czarny</option>
+									<option value="B2PK">Różowo-Czarny</option>
+									<option value="B2YK">Żółto-Czarny</option>
+									<option value="B2GK">Zielono-Czarny</option>
+									<option value="B2BK">Niebiesko-Czarny</option>
+									<option value="B2WK">Biało-Czarny</option>
+								</optgroup>
+							</select>
+						</p>
+
+						<p>Przycisk 3 (B3)
+
+							<select id="btn3">
+								<optgroup label="Jednolity">
+									<option value="B3R">Czerwony</option>
+									<option value="B3P">Różowy</option>
+									<option value="B3Y">Żółty</option>
+									<option value="B3G">Zielony</option>
+									<option value="B3B">Niebieski</option>
+									<option value="B3W">Biały</option>
+									<option value="B3K">Czarny</option>    
+								</optgroup>
+
+								<optgroup label="Mieszany">
+									<option value="B3RK">Czerwono-Czarny</option>
+									<option value="B3PK">Różowo-Czarny</option>
+									<option value="B3YK">Żółto-Czarny</option>
+									<option value="B3GK">Zielono-Czarny</option>
+									<option value="B3BK">Niebiesko-Czarny</option>
+									<option value="B3WK">Biało-Czarny</option>
+								</optgroup>
+							</select>
+						</p>
+					</fieldset>
+
+					<fieldset>
+
+						<p>Przelotka
+
+							<select id="db9">
+								<option value="DB9R">Czerwony</option>
+								<option value="DB9Y">Żółty</option>
+								<option value="DB9G">Zielony</option>
+								<option value="DB9B">Niebieski</option>
+								<option value="DB9K">Czarny</option>
+								<option value="DB9M">Srebrny</option>
+							</select>
+						</p>
+					</fieldset>
+				</div>
+
+				<!-- Feet length -->
+				<div class="option">
+					<h3>Wysokość nóżek</h3>
+
+					<div class="list">
+						<p>Przedni rząd
+
+							<select id="ffeet">
+								<option value="FF00">brak</option>
+								<option value="FF10" selected>10 mm</option>
+								<option value="FF20">20 mm</option>
+								<option value="FF30">30 mm</option>
+							</select>
+						</p>
+					</div>
+
+					<div class="list">
+						<p>Tylni rząd
+
+							<select id="bfeet">
+								<option value="BF00">brak</option>
+								<option value="BF10" selected>10 mm</option>
+								<option value="BF20">20 mm</option>
+								<option value="BF30">30 mm</option>
+							</select>
+						</p>
+					</div>
+				</div>
+
+				<div class="option">
+					<h3>Kod zamówienia</h3>
+					<p>
+						<br />						
+						<output id="code" name="code">Proszę, włącz obsługę JavaScript</output>
+					</p>
+					<p>
+						<button id="copyButton">Skopiuj do schowka</button>
+					</p>
+				</div>
+			</form>
+			
+			<a class="language" href="index.html">Wróc do strony głównej</a>
+
+		</div><!-- /.inner -->
+	</section><!-- /.main -->
+</body>
+
+<script>
+	// copy the code to clipboard
+	document.getElementById("copyButton").addEventListener("click", function(event) 
+	{
+		event.preventDefault();
+
+		var code = document.getElementById("code");
+		var range = document.createRange();
+
+		range.selectNode(code);
+		window.getSelection().addRange(range);
+
+		document.execCommand('copy');
+
+		console.log("Range: " + range);
+
+		window.getSelection().removeRange(range);
+	});
+
+	// Live Reload
+	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+
+</html>

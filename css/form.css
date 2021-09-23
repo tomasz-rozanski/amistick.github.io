@@ -1,0 +1,128 @@
+form {
+	display: inline-block;
+	width: 95%;
+
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+p.info {
+	width: 90%;
+	text-align: left;
+	margin: 1.2em auto 0 auto;
+}
+
+fieldset {
+	width: 95%;
+	/*border: 1px solid #333;*/
+	border: none;
+	margin: 0 auto;
+	/*margin: 0 auto;*/
+	padding: .8em 0;
+	display: block;
+}
+
+label {
+	text-align: center;
+}
+
+label > input {
+	visibility: hidden;
+	margin: 0 auto;
+}
+
+label > input + img {
+	display: inline-block;
+	width: 90%;
+	max-width: 320px;
+	cursor: pointer;
+	border: 2px solid transparent;
+	padding: 5px;
+	margin: 5px auto;		
+}
+
+label > input:checked + img {
+	border: 2px solid #0a0;
+}
+
+select {
+	display: block;
+	margin: 0 auto;
+	/*font-size: 95%;*/
+	width: 120px;
+	padding: 5px;
+	background-color: #eee;
+}
+
+option {
+	padding: 5px;
+	background-color: #eee;
+}
+
+optgroup {
+	background-color: #ddd;
+}
+
+legend {
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+fieldset > p {
+	margin: 0;
+	padding: 0;
+	-webkit-margin-after: .7em;
+}
+
+output {
+	line-height: 150%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	/*border: 1px dotted black;*/
+	padding: 10px;
+	/*background-color: #ccc;*/
+}
+
+.option {
+	width: 95%;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+
+}
+
+.list {
+	vertical-align: top;
+	max-width: 50%;
+	display: inline-block;
+	padding: 10px;
+}
+
+button {
+	padding: 5px;
+}
+
+button.order {
+	font-weight: bold;
+	font-size: 1rem;
+	
+	padding: 5px 15px;
+	margin-top: 1em;
+}
+
+button.order > a:link {
+	color: black;
+}
+
+button.order > a:visited {
+	color: black;
+}
+
+@media screen and (min-width: 768px) {
+	label > input + img {
+		width: 50%;
+		max-width: 360px;
+	}
+}
